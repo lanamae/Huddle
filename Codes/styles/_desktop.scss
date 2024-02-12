@@ -1,0 +1,307 @@
+@media (min-width: 1028px) {
+  .main {
+    nav {
+      padding: 30px 80px;
+
+      .logo {
+        width: 15%;
+        height: auto;
+      }
+    }
+
+    .hero-section {
+      background-image: url("../Assets/images/bg-hero-desktop.svg");
+
+      padding: 50px 80px 20px 80px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      justify-content: center;
+      align-items: center;
+
+      .hero-content {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: flex;
+        flex-direction: column;
+        padding-right: 80px;
+
+        .hero-head {
+          @include heading-text();
+          text-align: start;
+          font-size: 40px;
+          line-height: 160%;
+        }
+
+        .hero-sub {
+          @include body-text();
+          text-align: start;
+          padding: 20px 0px;
+          line-height: 160%;
+          color: $grayish;
+        }
+
+        .hero-cta {
+          width: 300px;
+          background: $pink;
+          color: $darkCyan;
+          box-shadow: 0px 0px 4px 0px;
+          padding: 16px 32px;
+          border-style: none;
+          border-radius: 50px;
+          margin: 20px 0px;
+          cursor: pointer;
+
+          &:hover {
+            background: rgba($pink, 0.5);
+          }
+
+          a {
+            text-decoration: none;
+            color: #fff;
+            @include cta-text();
+            font-size: 18px;
+          }
+        }
+      }
+
+      .hero-img {
+        grid-column: 2/3;
+        grid-row: 1/2;
+
+        width: 100%;
+        margin: 40px 0px;
+      }
+    }
+
+    .cards-section {
+      padding: 50px 80px 100px 80px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 50px;
+
+      .card {
+        padding: 50px 80px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
+
+        .card-illustration {
+          grid-column: 1/2;
+          grid-row: 1/2;
+          width: 100%-30%;
+          margin-bottom: 0px;
+        }
+
+        .card-content {
+          grid-column: 2/3;
+          grid-row: 1/2;
+
+          .card-title {
+            @include heading-text();
+            color: $darkCyan;
+            font-size: 18px;
+            text-align: start;
+            line-height: 160%;
+            margin-bottom: 20px;
+          }
+
+          .card-description {
+            @include body-text();
+            color: $grayish;
+            font-size: 16px;
+            text-align: start;
+            line-height: 160%;
+          }
+        }
+      }
+
+      #flowing {
+        justify-items: center;
+        align-items: center;
+
+        .card-illustration {
+          grid-column: 2/3;
+        }
+
+        .card-content {
+          grid-column: 1/2;
+        }
+      }
+    }
+
+    footer {
+      width: 100%;
+      height: auto;
+      background-color: $darkCyan;
+      position: relative;
+      padding: 150px 100px 50px 100px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      justify-items: center;
+      align-items: center;
+
+      .cta-section {
+        width: auto;
+        height: auto;
+        background-color: #fff;
+        padding: 30px 80px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 6px rgba($pink, 0.3);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -3.5rem;
+        right: auto;
+        place-self: center;
+
+        p {
+          @include heading-text();
+          text-align: center;
+          font-size: 24px;
+        }
+
+        .footer-cta {
+          width: 100%-20%;
+          background: $pink;
+          color: $darkCyan;
+          box-shadow: 0px 0px 4px 0px;
+          padding: 16px 12px;
+          border-style: none;
+          border-radius: 50px;
+          margin: 20px 0px;
+
+          cursor: pointer;
+
+          &:hover {
+            background: rgba($pink, 0.5);
+          }
+
+          a {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .footer-col1 {
+        margin-top: 50px;
+
+        .footer-logo {
+          filter: invert(100%) hue-rotate(180deg);
+        }
+
+        .footer-navlinks1 {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          row-gap: 30px;
+          margin: 30px 0px;
+
+          .footer-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            .footer-link {
+              @include body-text();
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      .footer-col2.footer-navlinks2 {
+        ul {
+          list-style: none;
+          display: flex;
+          flex-direction: row;
+          gap: 80px;
+          margin-top: 50px;
+
+          div {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+          }
+
+          li a {
+            @include body-text();
+            text-decoration: none;
+            color: #fff;
+          }
+        }
+      }
+
+      .footer-col3.socmed {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        margin: 20px 0px;
+        padding-top: 120px;
+
+        .icons {
+          display: flex;
+          gap: 20px;
+
+          .fb {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+            padding: 20px;
+            border: 1px solid #fff;
+            border-radius: 100px;
+          }
+
+          .twitter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+            padding: 20px;
+            border: 1px solid #fff;
+            border-radius: 100px;
+          }
+
+          .ig {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+            padding: 20px;
+            border: 1px solid #fff;
+            border-radius: 100px;
+          }
+
+          i {
+            font-size: 24px;
+            color: #fff;
+          }
+        }
+
+        .copyright {
+          @include body-text();
+          color: #fff;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

@@ -51,52 +51,64 @@
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto), 1fr;
+    grid-template-rows: auto, 1fr;
 
-    .hero-head {
+    .hero-content{
       grid-column: 1/2;
       grid-row: 1/2;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, auto);
+  
+      
+      .hero-head {
+          grid-column: 1/2;
+          grid-row: 1/2;
 
-      @include heading-text();
-      text-align: center;
-    }
+          @include heading-text();
+          text-align: center;
+        }
 
-    .hero-sub {
-      grid-column: 1/2;
-      grid-row: 2/3;
-      @include body-text();
-      text-align: center;
-      padding: 20px 0px;
-    }
+        .hero-sub {
+          grid-column: 1/2;
+          grid-row: 2/3;
+          @include body-text();
+          text-align: center;
+          padding: 20px 0px;
+          color: $grayish;
+          line-height: 160%;
 
-    .hero-cta {
-      grid-column: 1/2;
-      grid-row: 3/4;
+        }
 
-      background: $pink;
-      color: $darkCyan;
-      box-shadow: 0px 0px 4px 0px;
-      padding: 16px 32px;
-      border-style: none;
-      border-radius: 50px;
-      margin: 20px 0px;
-      cursor: pointer;
+        .hero-cta {
+          grid-column: 1/2;
+          grid-row: 3/4;
 
-      &:hover {
-        background: rgba($pink, 0.5);
-      }
+          background: $pink;
+          color: $darkCyan;
+          box-shadow: 0px 0px 4px 0px;
+          padding: 16px 32px;
+          border-style: none;
+          border-radius: 50px;
+          margin: 20px 0px;
+          cursor: pointer;
 
-      a {
-        text-decoration: none;
-        color: #fff;
-        @include cta-text();
-        font-size: 18px;
-      }
+          &:hover {
+            background: rgba($pink, 0.5);
+          }
+
+          a {
+            text-decoration: none;
+            color: #fff;
+            @include cta-text();
+            font-size: 18px;
+          }
+        } 
     }
 
     .hero-img {
       grid-column: 1/2;
-      grid-row: 4/5;
+      grid-row: 2/3;
 
       width: 100%;
       margin: 40px 0px;
@@ -200,6 +212,7 @@
       }
     }
 
+   .footer-col1{
     .footer-logo {
       filter: invert(100%) hue-rotate(180deg);
     }
@@ -224,8 +237,9 @@
         }
       }
     }
+   }
 
-    .footer-navlinks2 {
+    .footer-col2.footer-navlinks2 {
       ul {
         list-style: none;
         display: flex;
@@ -241,7 +255,7 @@
       }
     }
 
-    .socmed {
+    .footer-col3.socmed {
       display: flex;
       flex-direction: column;
       justify-content: center;

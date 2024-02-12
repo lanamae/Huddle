@@ -44,24 +44,33 @@
   padding: 50px 30px 20px 30px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, auto), 1fr;
+  grid-template-rows: auto, 1fr;
 }
-.main .hero-section .hero-head {
+.main .hero-section .hero-content {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+}
+.main .hero-section .hero-content .hero-head {
   grid-column: 1/2;
   grid-row: 1/2;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   text-align: center;
 }
-.main .hero-section .hero-sub {
+.main .hero-section .hero-content .hero-sub {
   grid-column: 1/2;
   grid-row: 2/3;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   text-align: center;
   padding: 20px 0px;
+  color: hsl(208, 11%, 55%);
+  line-height: 160%;
 }
-.main .hero-section .hero-cta {
+.main .hero-section .hero-content .hero-cta {
   grid-column: 1/2;
   grid-row: 3/4;
   background: hsl(322, 100%, 66%);
@@ -73,10 +82,10 @@
   margin: 20px 0px;
   cursor: pointer;
 }
-.main .hero-section .hero-cta:hover {
+.main .hero-section .hero-content .hero-cta:hover {
   background: rgba(255, 82, 191, 0.5);
 }
-.main .hero-section .hero-cta a {
+.main .hero-section .hero-content .hero-cta a {
   text-decoration: none;
   color: #fff;
   font-family: "Open Sans", sans-serif;
@@ -85,7 +94,7 @@
 }
 .main .hero-section .hero-img {
   grid-column: 1/2;
-  grid-row: 4/5;
+  grid-row: 2/3;
   width: 100%;
   margin: 40px 0px;
 }
@@ -177,10 +186,10 @@
   font-weight: 700;
   font-size: 12px;
 }
-.main footer .footer-logo {
+.main footer .footer-col1 .footer-logo {
   filter: invert(100%) hue-rotate(180deg);
 }
-.main footer .footer-navlinks1 {
+.main footer .footer-col1 .footer-navlinks1 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -188,31 +197,31 @@
   row-gap: 30px;
   margin: 30px 0px;
 }
-.main footer .footer-navlinks1 .footer-nav {
+.main footer .footer-col1 .footer-navlinks1 .footer-nav {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
-.main footer .footer-navlinks1 .footer-nav .footer-link {
+.main footer .footer-col1 .footer-navlinks1 .footer-nav .footer-link {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   color: #fff;
 }
-.main footer .footer-navlinks2 ul {
+.main footer .footer-col2.footer-navlinks2 ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin-top: 20px;
 }
-.main footer .footer-navlinks2 ul li a {
+.main footer .footer-col2.footer-navlinks2 ul li a {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   text-decoration: none;
   color: #fff;
 }
-.main footer .socmed {
+.main footer .footer-col3.socmed {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -221,11 +230,11 @@
   margin-top: 60px;
   gap: 15px;
 }
-.main footer .socmed .icons {
+.main footer .footer-col3.socmed .icons {
   display: flex;
   gap: 20px;
 }
-.main footer .socmed .icons .fb {
+.main footer .footer-col3.socmed .icons .fb {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -235,7 +244,7 @@
   border: 1px solid #fff;
   border-radius: 100px;
 }
-.main footer .socmed .icons .twitter {
+.main footer .footer-col3.socmed .icons .twitter {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -245,7 +254,7 @@
   border: 1px solid #fff;
   border-radius: 100px;
 }
-.main footer .socmed .icons .ig {
+.main footer .footer-col3.socmed .icons .ig {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -255,13 +264,280 @@
   border: 1px solid #fff;
   border-radius: 100px;
 }
-.main footer .socmed .icons i {
+.main footer .footer-col3.socmed .icons i {
   font-size: 24px;
   color: #fff;
 }
-.main footer .socmed .copyright {
+.main footer .footer-col3.socmed .copyright {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   color: #fff;
   font-size: 12px;
+}
+
+@media (min-width: 1028px) {
+  .main nav {
+    padding: 30px 80px;
+  }
+  .main nav .logo {
+    width: 15%;
+    height: auto;
+  }
+  .main .hero-section {
+    background-image: url("../Assets/images/bg-hero-desktop.svg");
+    padding: 50px 80px 20px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .hero-section .hero-content {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    padding-right: 80px;
+  }
+  .main .hero-section .hero-content .hero-head {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-align: start;
+    font-size: 40px;
+    line-height: 160%;
+  }
+  .main .hero-section .hero-content .hero-sub {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    text-align: start;
+    padding: 20px 0px;
+    line-height: 160%;
+    color: hsl(208, 11%, 55%);
+  }
+  .main .hero-section .hero-content .hero-cta {
+    width: 300px;
+    background: hsl(322, 100%, 66%);
+    color: hsl(192, 100%, 9%);
+    box-shadow: 0px 0px 4px 0px;
+    padding: 16px 32px;
+    border-style: none;
+    border-radius: 50px;
+    margin: 20px 0px;
+    cursor: pointer;
+  }
+  .main .hero-section .hero-content .hero-cta:hover {
+    background: rgba(255, 82, 191, 0.5);
+  }
+  .main .hero-section .hero-content .hero-cta a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .main .hero-section .hero-img {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 100%;
+    margin: 40px 0px;
+  }
+  .main .cards-section {
+    padding: 50px 80px 100px 80px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  .main .cards-section .card {
+    padding: 50px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+  }
+  .main .cards-section .card .card-illustration {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 70%;
+    margin-bottom: 0px;
+  }
+  .main .cards-section .card .card-content {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .main .cards-section .card .card-content .card-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: hsl(192, 100%, 9%);
+    font-size: 18px;
+    text-align: start;
+    line-height: 160%;
+    margin-bottom: 20px;
+  }
+  .main .cards-section .card .card-content .card-description {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    color: hsl(208, 11%, 55%);
+    font-size: 16px;
+    text-align: start;
+    line-height: 160%;
+  }
+  .main .cards-section #flowing {
+    justify-items: center;
+    align-items: center;
+  }
+  .main .cards-section #flowing .card-illustration {
+    grid-column: 2/3;
+  }
+  .main .cards-section #flowing .card-content {
+    grid-column: 1/2;
+  }
+  .main footer {
+    width: 100%;
+    height: auto;
+    background-color: hsl(192, 100%, 9%);
+    position: relative;
+    padding: 150px 100px 50px 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+  .main footer .cta-section {
+    width: auto;
+    height: auto;
+    background-color: #fff;
+    padding: 30px 80px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px rgba(255, 82, 191, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -3.5rem;
+    right: auto;
+    place-self: center;
+  }
+  .main footer .cta-section p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 24px;
+  }
+  .main footer .cta-section .footer-cta {
+    width: 80%;
+    background: hsl(322, 100%, 66%);
+    color: hsl(192, 100%, 9%);
+    box-shadow: 0px 0px 4px 0px;
+    padding: 16px 12px;
+    border-style: none;
+    border-radius: 50px;
+    margin: 20px 0px;
+    cursor: pointer;
+  }
+  .main footer .cta-section .footer-cta:hover {
+    background: rgba(255, 82, 191, 0.5);
+  }
+  .main footer .cta-section .footer-cta a {
+    font-size: 16px;
+  }
+  .main footer .footer-col1 {
+    margin-top: 50px;
+  }
+  .main footer .footer-col1 .footer-logo {
+    filter: invert(100%) hue-rotate(180deg);
+  }
+  .main footer .footer-col1 .footer-navlinks1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 30px;
+    margin: 30px 0px;
+  }
+  .main footer .footer-col1 .footer-navlinks1 .footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .main footer .footer-col1 .footer-navlinks1 .footer-nav .footer-link {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    color: #fff;
+  }
+  .main footer .footer-col2.footer-navlinks2 ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    margin-top: 50px;
+  }
+  .main footer .footer-col2.footer-navlinks2 ul div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .main footer .footer-col2.footer-navlinks2 ul li a {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+  }
+  .main footer .footer-col3.socmed {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    margin: 20px 0px;
+    padding-top: 120px;
+  }
+  .main footer .footer-col3.socmed .icons {
+    display: flex;
+    gap: 20px;
+  }
+  .main footer .footer-col3.socmed .icons .fb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 100px;
+  }
+  .main footer .footer-col3.socmed .icons .twitter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 100px;
+  }
+  .main footer .footer-col3.socmed .icons .ig {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 100px;
+  }
+  .main footer .footer-col3.socmed .icons i {
+    font-size: 24px;
+    color: #fff;
+  }
+  .main footer .footer-col3.socmed .copyright {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=style.css.map */
