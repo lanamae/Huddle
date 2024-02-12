@@ -3,10 +3,35 @@
 // $footerBg: #012333;
 // $paragraphText: #7b7b7b;
 
+
+
+
 $pink: hsl(322, 100%, 66%);
 $paleCyan: hsl(193, 100%, 96%);
 $darkCyan: hsl(192, 100%, 9%);
 $grayish: hsl(208, 11%, 55%);
+
+$headFont: 'Poppins', sans-serif;
+$bodyFont: 'Open Sans', sans-serif;
+
+@mixin heading-text{
+  font-family: $headFont;
+  font-weight: 600;
+}
+
+
+@mixin body-text{
+  font-family: $bodyFont;
+  font-weight: 400;
+  
+}
+
+@mixin cta-text{
+  font-family: $bodyFont;
+  font-weight: 700;
+}
+
+
 
 @import "mobile.scss";
 

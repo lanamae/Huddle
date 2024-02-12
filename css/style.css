@@ -6,6 +6,88 @@
 
 .main {
   width: 100%;
-  height: 100vh;
+  height: auto;
+}
+.main nav {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: hsl(193, 100%, 96%);
+}
+.main nav .logo {
+  width: 30%;
+  height: auto;
+}
+.main nav .nav-btn {
+  background: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: hsl(192, 100%, 9%);
+  box-shadow: 0px 0px 6px 0px;
+  padding: 8px 32px;
+  border-radius: 50px;
+}
+.main nav .nav-btn:hover {
+  color: hsl(208, 11%, 55%);
+}
+.main .hero-section {
+  max-width: 100%;
+  height: auto;
+  background-image: url("../Assets/images/bg-hero-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 50px 40px 20px 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto), 1fr;
+}
+.main .hero-section .hero-head {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  padding: 20px 0px;
+}
+.main .hero-section .hero-sub {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  padding: 20px 0px;
+}
+.main .hero-section .hero-cta {
+  grid-column: 1/2;
+  grid-row: 3/4;
   background: hsl(322, 100%, 66%);
+  color: hsl(192, 100%, 9%);
+  box-shadow: 0px 0px 4px 0px;
+  padding: 16px 32px;
+  border-style: none;
+  border-radius: 50px;
+  margin: 20px 0px;
+}
+.main .hero-section .hero-cta a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+.main .hero-section .hero-img {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  width: 100%;
+  margin: 40px 0px;
+}
+.main .cards-section {
+  width: 100%;
+}
+.main footer {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

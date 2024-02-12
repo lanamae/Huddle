@@ -9,6 +9,104 @@
 
 .main {
   width: 100%;
-  height: 100vh;
-  background: $pink;
+  height: auto;
+
+  nav {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: $paleCyan;
+
+    .logo {
+      width: 30%;
+      height: auto;
+    }
+
+    .nav-btn {
+      background: #fff;
+      @include cta-text();
+      color: $darkCyan;
+      box-shadow: 0px 0px 6px 0px;
+      padding: 8px 32px;
+      border-radius: 50px;
+
+      &:hover {
+        color: $grayish;
+      }
+    }
+  }
+
+  .hero-section {
+    max-width: 100%;
+    height: auto;
+    background-image: url("../Assets/images/bg-hero-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 50px 40px 20px 40px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto), 1fr;
+
+    .hero-head{
+      grid-column: 1/2;
+      grid-row: 1/2;
+
+      @include heading-text();
+      text-align: center;
+      padding : 20px 0px;
+    }
+
+    .hero-sub{
+      grid-column: 1/2;
+      grid-row: 2/3;
+      @include body-text();
+      text-align: center;
+      padding: 20px 0px;
+    }
+
+    .hero-cta{
+      grid-column: 1/2;
+      grid-row: 3/4;
+
+      background: $pink;
+      color: $darkCyan;
+      box-shadow: 0px 0px 4px 0px;
+      padding: 16px 32px;
+      border-style: none;
+      border-radius: 50px;
+      margin: 20px 0px;
+
+      a{
+        text-decoration: none;
+        color: #fff;
+        @include cta-text();
+        font-size: 18px;
+
+      }
+    }
+
+    .hero-img{
+      grid-column: 1/2;
+      grid-row: 4/5;
+
+      width: 100%;
+      margin: 40px 0px;
+    }
+
+
+    
+  }
+
+  .cards-section {
+    width: 100%;
+  }
+
+  footer {
+    width: 100%;
+  }
 }
