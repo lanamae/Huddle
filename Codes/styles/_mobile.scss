@@ -46,22 +46,21 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 50px 40px 20px 40px;
+    padding: 50px 30px 20px 30px;
 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto), 1fr;
 
-    .hero-head{
+    .hero-head {
       grid-column: 1/2;
       grid-row: 1/2;
 
       @include heading-text();
       text-align: center;
-      padding : 20px 0px;
     }
 
-    .hero-sub{
+    .hero-sub {
       grid-column: 1/2;
       grid-row: 2/3;
       @include body-text();
@@ -69,7 +68,7 @@
       padding: 20px 0px;
     }
 
-    .hero-cta{
+    .hero-cta {
       grid-column: 1/2;
       grid-row: 3/4;
 
@@ -81,25 +80,21 @@
       border-radius: 50px;
       margin: 20px 0px;
 
-      a{
+      a {
         text-decoration: none;
         color: #fff;
         @include cta-text();
         font-size: 18px;
-
       }
     }
 
-    .hero-img{
+    .hero-img {
       grid-column: 1/2;
       grid-row: 4/5;
 
       width: 100%;
       margin: 40px 0px;
     }
-
-
-    
   }
 
   .cards-section {

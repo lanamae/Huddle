@@ -40,7 +40,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 50px 40px 20px 40px;
+  padding: 50px 30px 20px 30px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto), 1fr;
@@ -51,7 +51,6 @@
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   text-align: center;
-  padding: 20px 0px;
 }
 .main .hero-section .hero-sub {
   grid-column: 1/2;
