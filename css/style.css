@@ -385,14 +385,24 @@
     text-align: start;
     line-height: 160%;
   }
-  .main .cards-section #flowing {
+  .main .cards-section #grow {
     justify-items: center;
     align-items: center;
   }
-  .main .cards-section #flowing .card-illustration {
+  .main .cards-section #grow .card-illustration {
     grid-column: 2/3;
   }
-  .main .cards-section #flowing .card-content {
+  .main .cards-section #grow .card-content {
+    grid-column: 1/2;
+  }
+  .main .cards-section #user {
+    justify-items: center;
+    align-items: center;
+  }
+  .main .cards-section #user .card-illustration {
+    grid-column: 2/3;
+  }
+  .main .cards-section #user .card-content {
     grid-column: 1/2;
   }
   .main footer {

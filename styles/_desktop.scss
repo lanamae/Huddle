@@ -121,7 +121,33 @@
         }
       }
 
-      #flowing {
+      // #flowing {
+      //   justify-items: center;
+      //   align-items: center;
+
+      //   .card-illustration {
+      //     grid-column: 2/3;
+      //   }
+
+      //   .card-content {
+      //     grid-column: 1/2;
+      //   }
+      // }
+
+      #grow {
+        justify-items: center;
+        align-items: center;
+
+        .card-illustration {
+          grid-column: 2/3;
+        }
+
+        .card-content {
+          grid-column: 1/2;
+        }
+      }
+
+      #user {
         justify-items: center;
         align-items: center;
 
