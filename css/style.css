@@ -372,10 +372,10 @@
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     color: hsl(192, 100%, 9%);
-    font-size: 18px;
+    font-size: 24px;
     text-align: start;
     line-height: 160%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   .main .cards-section .card .card-content .card-description {
     font-family: "Open Sans", sans-serif;

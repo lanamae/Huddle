@@ -105,10 +105,10 @@
           .card-title {
             @include heading-text();
             color: $darkCyan;
-            font-size: 18px;
+            font-size: 24px;
             text-align: start;
             line-height: 160%;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
           }
 
           .card-description {
