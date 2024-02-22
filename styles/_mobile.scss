@@ -18,7 +18,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
-    background: transparent;
+    background-color: $paleCyan;
 
     .logo {
       width: 30%;
@@ -43,6 +43,7 @@
   .hero-section {
     max-width: 100%;
     height: auto;
+    background-color: $paleCyan;
     background-image: url("../Assets/images/bg-hero-mobile.svg");
     background-repeat: no-repeat;
     background-position: center;

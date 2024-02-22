@@ -15,7 +15,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
-  background: transparent;
+  background-color: hsl(193, 100%, 96%);
 }
 .main nav .logo {
   width: 30%;
@@ -37,6 +37,7 @@
 .main .hero-section {
   max-width: 100%;
   height: auto;
+  background-color: hsl(193, 100%, 96%);
   background-image: url("../Assets/images/bg-hero-mobile.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -279,6 +280,7 @@
 
 @media (min-width: 1028px) {
   .main nav {
+    background-color: hsl(193, 100%, 96%);
     padding: 30px 80px;
   }
   .main nav .logo {
@@ -286,6 +288,7 @@
     height: auto;
   }
   .main .hero-section {
+    background-color: hsl(193, 100%, 96%);
     background-image: url("../Assets/images/bg-hero-desktop.svg");
     padding: 50px 80px 20px 80px;
     display: grid;

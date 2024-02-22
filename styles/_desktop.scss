@@ -1,6 +1,7 @@
 @media (min-width: 1028px) {
   .main {
     nav {
+      background-color: $paleCyan;
       padding: 30px 80px;
 
       .logo {
@@ -10,6 +11,7 @@
     }
 
     .hero-section {
+      background-color: $paleCyan;
       background-image: url("../Assets/images/bg-hero-desktop.svg");
 
       padding: 50px 80px 20px 80px;
